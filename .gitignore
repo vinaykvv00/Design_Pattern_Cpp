@@ -1,0 +1,62 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+obj/
+
+# C/C++ compiled files and libraries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app/
+*.gch
+*.pch
+*.pdb
+*.ilk
+*.d
+
+# Extensionless executable produced by the command example
+/command/main
+
+# CMake generated files (keep CMakeLists.txt and CMakePresets.json)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+CMakeUserPresets.json
+Testing/
+_deps/
+
+# Ninja generated files
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Coverage and profiling output
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# Visual Studio local state
+.vs/
+*.suo
+*.user
+
+# Editor temporary files
+*.swp
+*.swo
+*~
