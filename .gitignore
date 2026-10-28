@@ -24,10 +24,7 @@ obj/
 *.ilk
 *.d
 
-# Extensionless executable produced by the command example
-/command/main
-
-# CMake generated files (keep CMakeLists.txt and CMakePresets.json)
+# CMake generated files (keep CMakeLists.txt)
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
