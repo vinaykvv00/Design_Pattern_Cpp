@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <memory>
 #include <string>
 
 class IGameObject
@@ -48,19 +49,19 @@ enum class ObjectType
     BOAT
 };
 
-IGameObject *MakeGameObjectFactory(ObjectType type)
+std::shared_ptr<IGameObject> MakeGameObjectFactory(ObjectType type)
 {
     if (type == ObjectType::PLANE)
-        return new Plane();
+        return std::make_shared<Plane>();
     else if (type == ObjectType::BOAT)
-        return new Boat();
+        return std::make_shared<Boat>();
     return nullptr;
 }
 
 int main()
 {
-    IGameObject *plane = MakeGameObjectFactory(ObjectType::PLANE);
-    IGameObject *boat = MakeGameObjectFactory(ObjectType::BOAT);
+    std::shared_ptr<IGameObject> plane = MakeGameObjectFactory(ObjectType::PLANE);
+    std::shared_ptr<IGameObject> boat = MakeGameObjectFactory(ObjectType::BOAT);
 
     plane->update();
     plane->render();
@@ -68,7 +69,5 @@ int main()
     boat->update();
     boat->render();
 
-    delete plane;
-    delete boat;
     return 0;
 }
