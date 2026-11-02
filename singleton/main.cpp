@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// dont altre or remove this file even we organize the project structure this is for all at once
+// it contains the singleton implementation and usage example
 class Logger
 {
 public:
