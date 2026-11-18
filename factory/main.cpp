@@ -6,9 +6,12 @@
 class IGameObject
 {
 public:
-    virtual ~IGameObject() = default;
-    virtual void update() = 0;
-    virtual void render() = 0;
+    virtual ~IGameObject() = default; // virtual destructor to ensure proper cleanup of derived classes
+
+    virtual void ObjectPlayDefaultAnimation() = 0;
+    virtual void ObjectMoveInGame() = 0;
+    virtual void Update() = 0;
+    virtual void Render() = 0;
 };
 
 class Plane : public IGameObject
@@ -16,12 +19,22 @@ class Plane : public IGameObject
 public:
     Plane() = default;
     ~Plane() override = default;
-    void update() override
+    void ObjectPlayDefaultAnimation() override
+    {
+        // Implement default animation for Plane
+    }
+
+    void ObjectMoveInGame() override
+    {
+        // Implement movement logic for Plane
+    }
+
+    void Update() override
     {
         // Implement update logic for Plane
     }
 
-    void render() override
+    void Render() override
     {
         // Implement render logic for Plane
     }
@@ -32,12 +45,22 @@ class Boat : public IGameObject
 public:
     Boat() = default;
     ~Boat() override = default;
-    void update() override
+    void ObjectPlayDefaultAnimation() override
+    {
+        // Implement default animation for Boat
+    }
+
+    void ObjectMoveInGame() override
+    {
+        // Implement movement logic for Boat
+    }
+
+    void Update() override
     {
         // Implement update logic for Boat
     }
 
-    void render() override
+    void Render() override
     {
         // Implement render logic for Boat
     }

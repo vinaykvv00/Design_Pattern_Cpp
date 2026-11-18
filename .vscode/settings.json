@@ -3,14 +3,14 @@
         "editor.defaultFormatter": "ms-vscode.cpptools",
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 8,
         "editor.insertSpaces": true,
         "editor.detectIndentation": false
     },
     "[c]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
         "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 8,
         "editor.insertSpaces": true,
         "editor.detectIndentation": false
     },
