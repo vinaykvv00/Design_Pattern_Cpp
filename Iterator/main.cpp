@@ -48,11 +48,40 @@ int main()
     }
     std::cout << std::endl;
 
-    //reverse iterator
+    // reverse iterator
     std::cout << "Using reverse_iterator:" << std::endl;
     for (std::vector<int>::reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it)
     {
         std::cout << *it << " , ";
+    }
+    std::cout << std::endl;
+
+    // controlling advance iterator
+    std::cout << "Controlling advance iterator:" << std::endl;
+    for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
+    {
+        std::cout << *it << " , ";
+        if (it != vec.end())
+        {
+            ++it; // advance iterator by one more step
+        }
+    }
+    std::cout << std::endl;
+
+    // range based loops
+    std::cout << "Using range-based for loop:" << std::endl;
+    for (const int &num : vec)
+    {
+        std::cout << num << " , ";
+    }
+    std::cout << std::endl;
+
+    // unmap ds
+    std::cout << "unordered_map iterator examples" << std::endl;
+    std::unordered_map<int, std::string> umap = {{1, "one"}, {2, "two"}, {3, "three"}};
+    for (std::unordered_map<int, std::string>::iterator it = umap.begin(); it != umap.end(); ++it)
+    {
+        std::cout << it->first << " : " << it->second << " , ";
     }
     std::cout << std::endl;
 
