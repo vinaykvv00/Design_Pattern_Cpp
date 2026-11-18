@@ -8,17 +8,17 @@ int main()
     std::vector<int> vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     // traditional iterator loop
-    for (int i = 0; i < vec.size(); ++i)
-    {
-        std::cout << vec[i] << " ";
-    }
-    std::cout << std::endl;
+    //     for (int i = 0; i < vec.size(); ++i)
+    //     {
+    //         std::cout << vec[i] << " ";
+    //     }
+    //     std::cout << std::endl;
 
-    for (auto it = vec.begin(); it != vec.end(); ++it)
-    {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
+    //     for (auto it = vec.begin(); it != vec.end(); ++it)
+    //     {
+    //         std::cout << *it << " ";
+    //     }
+    //     std::cout << std::endl;
 
     for (int num : vec)
     {
@@ -34,6 +34,23 @@ int main()
 
     std::cout << "Using iterator comments:" << std::endl;
     for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
+    {
+        std::cout << *it << " , ";
+    }
+    std::cout << std::endl;
+
+    // further show intent to not to modify the vector while iterating
+    std::cout << "Using const_iterator:" << std::endl;
+    for (std::vector<int>::const_iterator it = vec.cbegin(); it != vec.cend(); ++it)
+    {
+        std::cout << *it << " , ";
+        //(*it)++; illegal, cannot modify through const_iterator
+    }
+    std::cout << std::endl;
+
+    //reverse iterator
+    std::cout << "Using reverse_iterator:" << std::endl;
+    for (std::vector<int>::reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it)
     {
         std::cout << *it << " , ";
     }
